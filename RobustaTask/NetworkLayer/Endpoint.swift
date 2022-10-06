@@ -20,18 +20,18 @@ extension Endpoint {
     var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
         components.path = path
-        var queryItems: [URLQueryItem] = []
         switch parameterEncoding {
         case .defaultEncoding:
             if let params = params, method == .get {
+                var queryItems: [URLQueryItem] = []
                 queryItems.append(contentsOf: params.map {
                     return URLQueryItem(name: "\($0)", value: "\($1)")
                 })
+                components.queryItems = queryItems
             }
         case .jsonEncoding:
             break
         }
-        components.queryItems = queryItems
         return components
     }
     
