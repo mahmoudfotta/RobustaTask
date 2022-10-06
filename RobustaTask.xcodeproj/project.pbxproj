@@ -18,6 +18,9 @@
 		0DE595D228EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */; };
 		0DE595E028EEFE9100A70BD0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595DF28EEFE9100A70BD0 /* APIClient.swift */; };
 		0DE595E228EEFF8400A70BD0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595E128EEFF8400A70BD0 /* APIError.swift */; };
+		0DE595E428EF0F8200A70BD0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595E328EF0F8200A70BD0 /* Endpoint.swift */; };
+		0DE595E728EF191200A70BD0 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595E628EF191200A70BD0 /* Dictionary+Extensions.swift */; };
+		0DE595E928EF195100A70BD0 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595E828EF195100A70BD0 /* URLRequest+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0DE595DF28EEFE9100A70BD0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0DE595E128EEFF8400A70BD0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0DE595E328EF0F8200A70BD0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0DE595E628EF191200A70BD0 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		0DE595E828EF195100A70BD0 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +143,19 @@
 			children = (
 				0DE595DF28EEFE9100A70BD0 /* APIClient.swift */,
 				0DE595E128EEFF8400A70BD0 /* APIError.swift */,
+				0DE595E328EF0F8200A70BD0 /* Endpoint.swift */,
+				0DE595E528EF18D100A70BD0 /* Helpers */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		0DE595E528EF18D100A70BD0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0DE595E628EF191200A70BD0 /* Dictionary+Extensions.swift */,
+				0DE595E828EF195100A70BD0 /* URLRequest+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +292,10 @@
 				0DE595B328EEFCF300A70BD0 /* ViewController.swift in Sources */,
 				0DE595AF28EEFCF300A70BD0 /* AppDelegate.swift in Sources */,
 				0DE595B128EEFCF300A70BD0 /* SceneDelegate.swift in Sources */,
+				0DE595E728EF191200A70BD0 /* Dictionary+Extensions.swift in Sources */,
 				0DE595E228EEFF8400A70BD0 /* APIError.swift in Sources */,
+				0DE595E928EF195100A70BD0 /* URLRequest+Extensions.swift in Sources */,
+				0DE595E428EF0F8200A70BD0 /* Endpoint.swift in Sources */,
 				0DE595E028EEFE9100A70BD0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
