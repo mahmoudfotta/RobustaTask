@@ -30,9 +30,9 @@ extension TestProvider: Endpoint {
     var params: [String : Any]? {
         switch self {
         case .first:
-            return nil
+            return ["page": "1"]
         case .second:
-            return ["page":"1"]
+            return ["page": "1"]
         }
     }
     

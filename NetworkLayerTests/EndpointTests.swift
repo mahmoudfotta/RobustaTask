@@ -50,4 +50,15 @@ class EndpointTests: XCTestCase {
         //then
         XCTAssertEqual(provider.request.httpBody, params)
     }
+    
+    func testEndpointSetsQuaryParamsInUrlCorrectly() {
+        //given
+        let provider = TestProvider.first
+        
+        //when
+        let queryUrl = URL(string: "https://api.github.com/first?page=1")!
+        
+        //then
+        XCTAssertEqual(provider.request.url, queryUrl)
+    }
 }
