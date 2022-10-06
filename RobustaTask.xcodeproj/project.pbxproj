@@ -16,6 +16,8 @@
 		0DE595C628EEFCF400A70BD0 /* RobustaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595C528EEFCF400A70BD0 /* RobustaTaskTests.swift */; };
 		0DE595D028EEFCF400A70BD0 /* RobustaTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595CF28EEFCF400A70BD0 /* RobustaTaskUITests.swift */; };
 		0DE595D228EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */; };
+		0DE595E028EEFE9100A70BD0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595DF28EEFE9100A70BD0 /* APIClient.swift */; };
+		0DE595E228EEFF8400A70BD0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595E128EEFF8400A70BD0 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0DE595CB28EEFCF400A70BD0 /* RobustaTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE595CF28EEFCF400A70BD0 /* RobustaTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITests.swift; sourceTree = "<group>"; };
 		0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DE595DF28EEFE9100A70BD0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0DE595E128EEFF8400A70BD0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		0DE595AD28EEFCF300A70BD0 /* RobustaTask */ = {
 			isa = PBXGroup;
 			children = (
+				0DE595DE28EEFDF000A70BD0 /* NetworkLayer */,
 				0DE595AE28EEFCF300A70BD0 /* AppDelegate.swift */,
 				0DE595B028EEFCF300A70BD0 /* SceneDelegate.swift */,
 				0DE595B228EEFCF300A70BD0 /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */,
 			);
 			path = RobustaTaskUITests;
+			sourceTree = "<group>";
+		};
+		0DE595DE28EEFDF000A70BD0 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0DE595DF28EEFE9100A70BD0 /* APIClient.swift */,
+				0DE595E128EEFF8400A70BD0 /* APIError.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,8 @@
 				0DE595B328EEFCF300A70BD0 /* ViewController.swift in Sources */,
 				0DE595AF28EEFCF300A70BD0 /* AppDelegate.swift in Sources */,
 				0DE595B128EEFCF300A70BD0 /* SceneDelegate.swift in Sources */,
+				0DE595E228EEFF8400A70BD0 /* APIError.swift in Sources */,
+				0DE595E028EEFE9100A70BD0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
