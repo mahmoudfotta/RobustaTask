@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RepositoriesListPresenter {
     private var repositoriesModel: RepositoriesListModel?
@@ -39,5 +40,11 @@ class RepositoriesListPresenter {
     
     func getOwner(index: Int) -> Owner {
         return repositories[index].owner
+    }
+    
+    func getDetailController(index: Int) -> UIViewController {
+        let repo = repositories[index]
+        let detailController = RepositoriesDetailBuilder.buildViewController(with: repo)
+        return detailController
     }
 }

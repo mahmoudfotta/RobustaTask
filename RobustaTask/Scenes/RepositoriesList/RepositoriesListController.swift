@@ -55,4 +55,9 @@ extension RepositoriesListController: UITableViewDataSource, UITableViewDelegate
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let controller = presenter?.getDetailController(index: indexPath.row) else { return }
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
