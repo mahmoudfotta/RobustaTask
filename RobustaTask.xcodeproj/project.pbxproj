@@ -35,6 +35,7 @@
 		0DE6D25928F0553E0099420B /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6D25828F0553E0099420B /* Repositories.storyboard */; };
 		0DE6D25B28F0585B0099420B /* RepositoriesListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */; };
 		0DE6D25F28F05BD60099420B /* RepositoriesListClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25E28F05BD60099420B /* RepositoriesListClientMock.swift */; };
+		0DE6D26228F05CBE0099420B /* RepositoriesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D26128F05CBE0099420B /* RepositoriesListPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		0DE6D25828F0553E0099420B /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
 		0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListModelTests.swift; sourceTree = "<group>"; };
 		0DE6D25E28F05BD60099420B /* RepositoriesListClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListClientMock.swift; sourceTree = "<group>"; };
+		0DE6D26128F05CBE0099420B /* RepositoriesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */,
+				0DE6D26128F05CBE0099420B /* RepositoriesListPresenterTests.swift */,
 				0DE6D26028F05BDB0099420B /* Helper */,
 			);
 			path = RepositoriesList;
@@ -501,6 +504,7 @@
 			files = (
 				0DE6D25F28F05BD60099420B /* RepositoriesListClientMock.swift in Sources */,
 				0DE6D25B28F0585B0099420B /* RepositoriesListModelTests.swift in Sources */,
+				0DE6D26228F05CBE0099420B /* RepositoriesListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

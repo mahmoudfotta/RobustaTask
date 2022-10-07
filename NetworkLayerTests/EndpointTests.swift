@@ -23,7 +23,7 @@ class EndpointTests: XCTestCase {
         let provider = TestProvider.first
         
         //when
-        let url = URL(string: "https://api.github.com/first")
+        let url = URL(string: "https://api.github.com/first?page=1")
         
         //then
         XCTAssertEqual(provider.request.url!, url!)
