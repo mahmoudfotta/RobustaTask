@@ -8,10 +8,9 @@
 import UIKit
 
 class RepositoriesListController: UIViewController, Storyboarded {
-    static var storyboardName: String = "Repositories"
     @IBOutlet weak var tableView: UITableView!
-    
 
+    static var storyboardName: String = "Repositories"
     var presenter: RepositoriesListPresenter?
     
     override func viewDidLoad() {
@@ -24,7 +23,7 @@ class RepositoriesListController: UIViewController, Storyboarded {
         title = "Repositories List"
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "RepoTableViewCell", bundle: .main), forCellReuseIdentifier: "RepoTableViewCell")
     }
     
     func fetchData() {
@@ -46,8 +45,14 @@ extension RepositoriesListController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let repo = presenter?.getRepo(index: indexPath.row)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = repo?.fullName
+        let owner = presenter?.getOwner(index: indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
+        cell.repoTitleLabel.text = repo?.fullName
+        if let url = URL(string: owner?.avatarURL ?? "") {
+            cell.ownerImageView.load(url)
+        } else {
+            cell.ownerImageView.image = nil
+        }
         return cell
     }
 }
