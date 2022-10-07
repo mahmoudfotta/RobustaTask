@@ -12,7 +12,6 @@
 		0DE595B628EEFCF300A70BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE595B428EEFCF300A70BD0 /* Main.storyboard */; };
 		0DE595B828EEFCF400A70BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE595B728EEFCF400A70BD0 /* Assets.xcassets */; };
 		0DE595BB28EEFCF400A70BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE595B928EEFCF400A70BD0 /* LaunchScreen.storyboard */; };
-		0DE595C628EEFCF400A70BD0 /* RobustaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595C528EEFCF400A70BD0 /* RobustaTaskTests.swift */; };
 		0DE595D028EEFCF400A70BD0 /* RobustaTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595CF28EEFCF400A70BD0 /* RobustaTaskUITests.swift */; };
 		0DE595D228EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */; };
 		0DE595E028EEFE9100A70BD0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE595DF28EEFE9100A70BD0 /* APIClient.swift */; };
@@ -34,6 +33,8 @@
 		0DE6D25128F0528C0099420B /* RepositoriesListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25028F0528C0099420B /* RepositoriesListBuilder.swift */; };
 		0DE6D25428F0535E0099420B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25328F0535E0099420B /* Storyboarded.swift */; };
 		0DE6D25928F0553E0099420B /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6D25828F0553E0099420B /* Repositories.storyboard */; };
+		0DE6D25B28F0585B0099420B /* RepositoriesListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */; };
+		0DE6D25F28F05BD60099420B /* RepositoriesListClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D25E28F05BD60099420B /* RepositoriesListClientMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,6 @@
 		0DE595BA28EEFCF400A70BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE595BC28EEFCF400A70BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE595C128EEFCF400A70BD0 /* RobustaTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DE595C528EEFCF400A70BD0 /* RobustaTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskTests.swift; sourceTree = "<group>"; };
 		0DE595CB28EEFCF400A70BD0 /* RobustaTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE595CF28EEFCF400A70BD0 /* RobustaTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITests.swift; sourceTree = "<group>"; };
 		0DE595D128EEFCF400A70BD0 /* RobustaTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		0DE6D25028F0528C0099420B /* RepositoriesListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListBuilder.swift; sourceTree = "<group>"; };
 		0DE6D25328F0535E0099420B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		0DE6D25828F0553E0099420B /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
+		0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListModelTests.swift; sourceTree = "<group>"; };
+		0DE6D25E28F05BD60099420B /* RepositoriesListClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListClientMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +172,7 @@
 		0DE595C428EEFCF400A70BD0 /* RobustaTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DE595C528EEFCF400A70BD0 /* RobustaTaskTests.swift */,
+				0DE6D25C28F058950099420B /* Scenes */,
 			);
 			path = RobustaTaskTests;
 			sourceTree = "<group>";
@@ -285,6 +287,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		0DE6D25C28F058950099420B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0DE6D25D28F059060099420B /* RepositoriesList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0DE6D25D28F059060099420B /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				0DE6D25A28F0585B0099420B /* RepositoriesListModelTests.swift */,
+				0DE6D26028F05BDB0099420B /* Helper */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		0DE6D26028F05BDB0099420B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0DE6D25E28F05BD60099420B /* RepositoriesListClientMock.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +401,7 @@
 					};
 					0DE595C028EEFCF400A70BD0 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 0DE595AA28EEFCF300A70BD0;
 					};
 					0DE595CA28EEFCF400A70BD0 = {
@@ -471,7 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE595C628EEFCF400A70BD0 /* RobustaTaskTests.swift in Sources */,
+				0DE6D25F28F05BD60099420B /* RepositoriesListClientMock.swift in Sources */,
+				0DE6D25B28F0585B0099420B /* RepositoriesListModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,15 +738,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XF35BWY2PL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmoudfotta.RobustaTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RobustaTask.app/RobustaTask";
@@ -729,11 +765,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XF35BWY2PL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahmoudfotta.RobustaTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
