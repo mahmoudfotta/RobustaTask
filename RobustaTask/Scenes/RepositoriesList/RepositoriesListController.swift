@@ -9,13 +9,15 @@ import UIKit
 
 class RepositoriesListController: UIViewController, Storyboarded {
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController(searchResultsController: nil)
 
     static var storyboardName: String = "Repositories"
     var presenter: RepositoriesListPresenter?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupSarchBar()
         fetchData()
     }
 
@@ -24,6 +26,13 @@ class RepositoriesListController: UIViewController, Storyboarded {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "RepoTableViewCell", bundle: .main), forCellReuseIdentifier: "RepoTableViewCell")
+    }
+    
+    func setupSarchBar() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Repositories"
+        navigationItem.searchController = searchController
     }
     
     func fetchData() {
@@ -60,4 +69,12 @@ extension RepositoriesListController: UITableViewDataSource, UITableViewDelegate
         guard let controller = presenter?.getDetailController(index: indexPath.row) else { return }
         self.navigationController?.pushViewController(controller, animated: true)
     }
+}
+
+extension RepositoriesListController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+      let searchBar = searchController.searchBar
+      presenter?.filterRepositories(with: searchBar.text ?? "")
+      self.tableView.reloadData()
+  }
 }

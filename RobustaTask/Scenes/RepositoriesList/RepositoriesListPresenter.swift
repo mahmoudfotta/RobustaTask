@@ -11,6 +11,7 @@ import UIKit
 class RepositoriesListPresenter {
     private var repositoriesModel: RepositoriesListModel?
     private var repositories: [Repository] = []
+    private var filteredRepositories: [Repository] = []
     private var errorMessage: String?
     
     init (repositoriesModel: RepositoriesListModel?) {
@@ -25,25 +26,35 @@ class RepositoriesListPresenter {
                 completion(nil, errorMessage)
             } else {
                 self.repositories = repos ?? []
+                self.filteredRepositories = repos ?? []
                 completion(repos, nil)
             }
         })
     }
     
     func getReposCount() -> Int {
-        return repositories.count
+        return filteredRepositories.count
     }
     
     func getRepo(index: Int) -> Repository {
-        return repositories[index]
+        return filteredRepositories[index]
     }
     
     func getOwner(index: Int) -> Owner {
-        return repositories[index].owner
+        return filteredRepositories[index].owner
+    }
+    
+    func filterRepositories(with text: String) {
+        if text.count >= 2 {
+            let lowerdText = text.lowercased()
+            filteredRepositories = repositories.filter { $0.fullName?.lowercased().contains(lowerdText) ?? false }
+        } else {
+            filteredRepositories = repositories
+        }
     }
     
     func getDetailController(index: Int) -> UIViewController {
-        let repo = repositories[index]
+        let repo = filteredRepositories[index]
         let detailController = RepositoriesDetailBuilder.buildViewController(with: repo)
         return detailController
     }
